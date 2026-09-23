@@ -13,7 +13,6 @@ const PORT = process.env.PORT || 3000;
 app.use('/', pagesRouter);
 app.use('/api', apiRouter);
 
-
 //unit 2:
 
 //parameters: express captures and stores them in req.params.
