@@ -3,12 +3,14 @@ import express from 'express';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.set("view engine", "ejs");
+
 app.get('/', (req, res) => {
   res.send('Hello, web!');
 });
 
 app.get('/about', (req, res) => {
-  res.send("this is a web programming course.");
+  res.render("about", {title: "About"});
 });
 
 app.get('/status', (req, res) => {
